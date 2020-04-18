@@ -594,10 +594,16 @@ static kip1_patch_t _fs_nogc_1000[] =
 	{ 0, 0, NULL, NULL }
 };
 
+static kip1_patch_t _fs_4chan_1000[] =
+{
+	{ KPS(KIP_TEXT) | 0xDC01C, 8, "\x75\x2E\xFE\x97\x40\x04\x00\x36", "\x20\x00\x80\xD2\x1F\x20\x03\xD5" },
+	{ 0, 0, NULL, NULL }
+};
 static kip1_patchset_t _fs_patches_1000[] =
 {
 	{ "nogc",     _fs_nogc_1000 },
 	{ "emummc",   _fs_emummc },
+	{ "nosigchk",    _fs_4chan_1000 },
 	{ NULL, NULL }
 };
 
